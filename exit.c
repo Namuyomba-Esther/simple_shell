@@ -14,7 +14,7 @@ int toExit(char *args[], int argNo)
 	if (argNo == 1 && strcmp(args[0], "exit") == 0)
 	{
 		puts("Disconnecting...");
-		return (1);
+		exit(0);
 	} else if (argNo > 1)
 	{
 		status = atoi(args[1]);

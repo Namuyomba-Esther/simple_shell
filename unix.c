@@ -12,12 +12,8 @@ int main(void)
 		char command[LENGTH];
 		char *args[30];
 		int argNo;
-		size_t leng = strlen(command);
 
 		givePrompt();
-		if (leng > 0 && command[leng - 1] == '\n')
-		command[leng - 1] = '\0';
-
 		if (fgets(command, sizeof(command), stdin) == NULL)
 		{
 			if (feof(stdin))
@@ -29,21 +25,17 @@ int main(void)
 				exit(EXIT_FAILURE);
 			}
 		}
-		if (leng > 0 && command[leng - 1] == '\n')
-			command[leng - 1] = '\0';
+		if (strlen(command) > 0 && command[strlen(command) - 1] == '\n')
+			command[strlen(command) - 1] = '\0';
 		if (command[0] == '#')
 			continue;
 		tokeniser(command, args, &argNo);
-		if (toExit(args, argNo))
-		{
-			break;
-		} else if (argNo == 1 && strcmp(args[0], "env") == 0)
+		toExit(args, argNo);
+		if (argNo == 1 && strcmp(args[0], "env") == 0)
 		{
 			giveEnv();
 			continue;
 		}
-		createA("ls", "/bin/ls");
-		listA("ls");
 		executee(args);
 	}
 	return (0);

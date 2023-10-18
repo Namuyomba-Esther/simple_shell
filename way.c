@@ -2,7 +2,7 @@
 
 /**
  * givePath - prints the PATH environment variable
- * Return: 0 for failure to execute
+ * Return: 0 for success
  */
 
 char *givePath(void)
@@ -15,7 +15,6 @@ char *givePath(void)
 	if (access(pathCmd, X_OK) == 0)
 	{
 		return (strdup(pathCmd));
-		free(path);
 	}
 	return (0);
 }

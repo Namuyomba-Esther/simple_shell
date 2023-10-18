@@ -10,7 +10,7 @@ int toCd(const char *path)
 {
 	const char *newDir = NULL;
 
-	if (path == NULL || strcmp(path, "-") == 0)
+	if (path == NULL || strcmp(path, " ") == 0)
 	{
 		newDir = getenv("HOME");
 	} else if (strcmp(path, "-") == 0)
