@@ -16,7 +16,7 @@ int main(void)
 
 		givePrompt();
 		if (leng > 0 && command[leng - 1] == '\n')
-                        command[leng - 1] = '\0';
+		command[leng - 1] = '\0';
 
 		if (fgets(command, sizeof(command), stdin) == NULL)
 		{
