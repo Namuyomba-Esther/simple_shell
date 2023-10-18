@@ -8,6 +8,9 @@
 
 void createA(const char *name, const char *value)
 {
+	struct Alias aliasses[20];
+	int aliassesNo = 0;
+
 	for (aliassesNo = 0; aliassesNo < 20; aliassesNo++)
 	{
 		if (strcmp(aliasses[aliassesNo].name, name) == 0)
@@ -33,7 +36,10 @@ void createA(const char *name, const char *value)
 void listA(const char *name)
 {
 	int j = 0;
-       	while (j < aliassesNo)
+	struct Alias aliasses[20];
+	int aliassesNo = 0;
+
+	while (j < aliassesNo)
 	{
 		if (strcmp(aliasses[j].name, name) == 0)
 		{

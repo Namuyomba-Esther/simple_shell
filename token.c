@@ -10,7 +10,6 @@
 void tokeniser(char *command, char *args[], int *argNo)
 {
 	char *token;
-	
 	*argNo = 0;
 	token = strtok(command, " ");
 

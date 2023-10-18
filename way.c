@@ -14,7 +14,7 @@ char *givePath(void)
 	snprintf(pathCmd, sizeof(pathCmd), "%s/%s", path, cmd);
 	if (access(pathCmd, X_OK) == 0)
 	{
-		return strdup(pathCmd);
+		return (strdup(pathCmd));
 		free(path);
 	}
 	return (0);

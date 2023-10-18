@@ -7,5 +7,4 @@
 void givePrompt(void)
 {
 	printf("say_it:> ");
-	
 }

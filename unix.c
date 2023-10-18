@@ -5,9 +5,6 @@
  * Return: 0 for success
  */
 
-int aliassesNo = 0;
-struct Alias aliasses[20];
-
 int main(void)
 {
 	while (1)
@@ -15,7 +12,7 @@ int main(void)
 		char command[LENGTH];
 		char *args[30];
 		int argNo;
-		
+
 		givePrompt();
 		if (fgets(command, sizeof(command), stdin) == NULL)
 		{
@@ -41,6 +38,8 @@ int main(void)
 			continue;
 		}
 		executee(args);
+		createA("ls", "/bin/ls");
+		listA("ls");
 	}
 	return (0);
 }

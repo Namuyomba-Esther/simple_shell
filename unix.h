@@ -14,7 +14,7 @@
 extern char **environ;
 
 /**
- * struct Aliass - cmponents of an alias
+ * struct Alias - cmponents of an alias
  * @name: assigned name of the alias
  * @value: string assigned to the name
  */

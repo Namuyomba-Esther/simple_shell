@@ -2,7 +2,7 @@
 
 /**
  * toCd - function that changes directory
- * @newDir: name of the new directory
+ * @path: name of the new directory
  * Return: Always 0
  */
 
