@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+/**
+ * main- Entry point
+ * Return: 0 for success
+ */
+
+int main(void)
+{
+	char *what;
+
+	what = "cool";
+	
+	printf("Programming is %s!\n", what);
+	return (0);
+}
