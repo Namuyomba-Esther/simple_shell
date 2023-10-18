@@ -6,5 +6,6 @@
 
 void givePrompt(void)
 {
-	printf("say_it:> ");
+	write(1, "say_it:> ", strlen("say_it:> "));
+	fflush(stdout);
 }

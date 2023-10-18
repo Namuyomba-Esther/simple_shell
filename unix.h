@@ -1,7 +1,7 @@
 #ifndef UNIX_H
 #define UNIX_H
 
-#define LENGTH 200
+#define LENGTH 1024
 
 #include <stdio.h>
 #include <stdlib.h>
